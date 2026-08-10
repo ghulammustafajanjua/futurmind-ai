@@ -26,7 +26,7 @@ Premium multi-page website by **Ghulam Mustafa Janjua** (Dubai, UAE).
 | `styles.css` | Premium futuristic design |
 | `script.js` | Menu, FAQ, form, filters, animations |
 | `robots.txt` | Search engine rules |
-| `sitemap.xml` | SEO sitemap (update domain when live) |
+| `sitemap.xml` | SEO sitemap for futurmindai.com
 
 ## Branding
 
