@@ -1,4 +1,4 @@
-# FutureMind AI
+# FuturMind AI
 
 **Explore. Create. Earn with AI.**
 
@@ -18,7 +18,7 @@ Premium multi-page website by **Ghulam Mustafa Janjua** (Dubai, UAE).
 | `tools.html` | AI Tools Directory with category filters |
 | `blog.html` | AI tutorials & guides |
 | `news.html` | AI news & trends |
-| `about.html` | About FutureMind AI & founder |
+| `about.html` | About FuturMind AI & founder |
 | `contact.html` | Contact form + real contact details |
 | `privacy.html` | Privacy Policy (AdSense-ready) |
 | `terms.html` | Terms of Service |
@@ -30,7 +30,7 @@ Premium multi-page website by **Ghulam Mustafa Janjua** (Dubai, UAE).
 
 ## Branding
 
-- **Name:** FutureMind AI  
+- **Name:** FuturMind AI  
 - **Tagline:** Explore. Create. Earn with AI.  
 - **Owner:** Ghulam Mustafa Janjua  
 - **Email:** mustafajanjua0786@gmail.com  
