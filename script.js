@@ -1,267 +1,79 @@
-/**
- * FutureMind AI — Site interactions
- * Owner: Ghulam Mustafa Janjua
- */
-
-(function () {
-  "use strict";
-
-  const header = document.getElementById("header");
-  const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.getElementById("navLinks");
-  const backToTop = document.getElementById("backToTop");
-  const contactForm = document.getElementById("contactForm");
-  const formSuccess = document.getElementById("formSuccess");
-  const yearEls = document.querySelectorAll("[data-year]");
-  const faqItems = document.querySelectorAll(".faq-item");
-  const filterBtns = document.querySelectorAll("[data-filter]");
-  const filterChips = document.querySelectorAll(".filter-chip");
-  const toolCards = document.querySelectorAll(".tool-card[data-category]");
-  const animateEls = document.querySelectorAll(".animate-on-scroll");
-
-  // Current year
-  yearEls.forEach((el) => {
-    el.textContent = new Date().getFullYear();
-  });
-
-  // Active nav link based on current page
-  const path = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
-  document.querySelectorAll(".nav-links a[href]").forEach((link) => {
-    const href = (link.getAttribute("href") || "").toLowerCase();
-    if (!href || href.startsWith("#") || href.startsWith("http") || href.startsWith("mailto")) return;
-    const file = href.split("/").pop().split("#")[0];
-    if (file === path || (path === "" && file === "index.html")) {
-      link.classList.add("active");
-    }
-  });
-
-  // Mobile menu
-  function closeMenu() {
-    if (!menuToggle || !navLinks) return;
-    menuToggle.classList.remove("active");
-    navLinks.classList.remove("open");
-    document.body.style.overflow = "";
-  }
-
-  function openMenu() {
-    if (!menuToggle || !navLinks) return;
-    menuToggle.classList.add("active");
-    navLinks.classList.add("open");
-    document.body.style.overflow = "hidden";
-  }
-
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", () => {
-      if (navLinks.classList.contains("open")) closeMenu();
-      else openMenu();
-    });
-
-    navLinks.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", closeMenu);
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMenu();
-    });
-
-    document.addEventListener("click", (e) => {
-      if (
-        navLinks.classList.contains("open") &&
-        !navLinks.contains(e.target) &&
-        !menuToggle.contains(e.target)
-      ) {
-        closeMenu();
-      }
-    });
-  }
-
-  // Header + back to top
-  function onScroll() {
-    const y = window.scrollY || window.pageYOffset;
-    if (header) header.classList.toggle("scrolled", y > 40);
-    if (backToTop) backToTop.classList.toggle("visible", y > 500);
-  }
-
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-
-  if (backToTop) {
-    backToTop.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  }
-
-  // Scroll reveal
-  if ("IntersectionObserver" in window && animateEls.length) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -36px 0px" }
-    );
-    animateEls.forEach((el) => observer.observe(el));
-  } else {
-    animateEls.forEach((el) => el.classList.add("visible"));
-  }
-
-  // FAQ accordion
-  faqItems.forEach((item) => {
-    const btn = item.querySelector(".faq-question");
-    if (!btn) return;
-    btn.addEventListener("click", () => {
-      const isActive = item.classList.contains("active");
-      faqItems.forEach((other) => {
-        other.classList.remove("active");
-        const ob = other.querySelector(".faq-question");
-        if (ob) ob.setAttribute("aria-expanded", "false");
-      });
-      if (!isActive) {
-        item.classList.add("active");
-        btn.setAttribute("aria-expanded", "true");
-      }
-    });
-  });
-
-  // Category filter buttons (homepage) → tools
-  filterBtns.forEach((btn) => {
-    if (btn.classList.contains("filter-chip")) return;
-    btn.addEventListener("click", () => {
-      const filter = btn.getAttribute("data-filter");
-      if (!filter) return;
-      const toolsSection = document.getElementById("tools");
-      if (toolsSection) {
-        toolsSection.scrollIntoView({ behavior: "smooth" });
-      }
-      document.querySelectorAll(".tool-card[data-category]").forEach((card) => {
-        card.classList.remove("highlight");
-        if (card.getAttribute("data-category") === filter) {
-          card.classList.add("highlight");
-        }
-      });
-      setTimeout(() => {
-        document.querySelectorAll(".tool-card").forEach((c) => c.classList.remove("highlight"));
-      }, 2500);
-    });
-  });
-
-  // Tools directory filter chips
-  if (filterChips.length && toolCards.length) {
-    filterChips.forEach((chip) => {
-      chip.addEventListener("click", () => {
-        const filter = chip.getAttribute("data-filter") || "all";
-        filterChips.forEach((c) => c.classList.remove("active"));
-        chip.classList.add("active");
-        toolCards.forEach((card) => {
-          const cat = card.getAttribute("data-category");
-          const show = filter === "all" || cat === filter;
-          card.style.display = show ? "" : "none";
-        });
-      });
-    });
-  }
-
-  // Contact form
-  function showError(id, message) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = message;
-  }
-
-  function clearErrors() {
-    ["nameError", "emailError", "subjectError", "messageError"].forEach((id) => showError(id, ""));
-    if (!contactForm) return;
-    contactForm.querySelectorAll("input, select, textarea").forEach((f) => f.classList.remove("error"));
-  }
-
-  function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
-
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      clearErrors();
-      if (formSuccess) formSuccess.hidden = true;
-
-      const name = document.getElementById("name");
-      const email = document.getElementById("email");
-      const subject = document.getElementById("subject");
-      const message = document.getElementById("message");
-      let valid = true;
-
-      if (!name || !name.value.trim()) {
-        showError("nameError", "Please enter your name.");
-        if (name) name.classList.add("error");
-        valid = false;
-      } else if (name.value.trim().length < 2) {
-        showError("nameError", "Name should be at least 2 characters.");
-        name.classList.add("error");
-        valid = false;
-      }
-
-      if (!email || !email.value.trim()) {
-        showError("emailError", "Please enter your email.");
-        if (email) email.classList.add("error");
-        valid = false;
-      } else if (!isValidEmail(email.value.trim())) {
-        showError("emailError", "Please enter a valid email address.");
-        email.classList.add("error");
-        valid = false;
-      }
-
-      if (!subject || !subject.value) {
-        showError("subjectError", "Please choose a topic.");
-        if (subject) subject.classList.add("error");
-        valid = false;
-      }
-
-      if (!message || !message.value.trim()) {
-        showError("messageError", "Please write a message.");
-        if (message) message.classList.add("error");
-        valid = false;
-      } else if (message.value.trim().length < 10) {
-        showError("messageError", "Message should be at least 10 characters.");
-        message.classList.add("error");
-        valid = false;
-      }
-
-      if (!valid) return;
-
-      // Client-side demo success (no backend)
-      // Prefer opening mail client with owner's address
-      const ownerEmail = "mustafajanjua0786@gmail.com";
-      const mailSubject = encodeURIComponent("[FutureMind AI] " + (subject.options[subject.selectedIndex].text || subject.value));
-      const mailBody = encodeURIComponent(
-        "Name: " + name.value.trim() + "\nEmail: " + email.value.trim() + "\n\n" + message.value.trim()
-      );
-
-      contactForm.reset();
-      if (formSuccess) {
-        formSuccess.hidden = false;
-        formSuccess.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      }
-
-      // Optional: open mail client for real outreach
-      try {
-        window.location.href = "mailto:" + ownerEmail + "?subject=" + mailSubject + "&body=" + mailBody;
-      } catch (_) {
-        /* ignore */
-      }
-
-      setTimeout(() => {
-        if (formSuccess) formSuccess.hidden = true;
-      }, 8000);
-    });
-
-    contactForm.querySelectorAll("input, select, textarea").forEach((field) => {
-      field.addEventListener("input", () => {
-        field.classList.remove("error");
-        showError(field.id + "Error", "");
-      });
-    });
-  }
-})();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — FuturMind AI</title>
+  <meta name="description" content="Terms of Service for FuturMind AI owned by Ghulam Mustafa Janjua. Please read before using this website." />
+  <meta name="author" content="Ghulam Mustafa Janjua" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://futurmindai.com/terms" />
+  <meta name="theme-color" content="#050810" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="index.html" class="logo"><span class="logo-mark"><span class="logo-fm">FM</span></span><span class="logo-text">FuturMind AI<span>Explore. Create. Earn</span></span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tools.html">AI Tools</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="news.html">AI News</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="btn btn-nav">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" type="button"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="hero-bg"><div class="grid-overlay"></div></div>
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Terms of Service</span></div>
+        <h1>Terms of Service</h1>
+        <p>Please read these terms before using FuturMind AI.</p>
+      </div>
+    </section>
+    <div class="container legal-content">
+      <p class="legal-updated">Last updated: July 20, 2026 · Owner: Ghulam Mustafa Janjua</p>
+      <p>By using futurmindai.com (“the Site”), you agree to these Terms of Service. If you do not agree, please do not use the Site.</p>
+      <h2>1. About this website</h2>
+      <p>FuturMind AI is an educational website owned by Ghulam Mustafa Janjua, based in Dubai, United Arab Emirates, sharing information about AI tools, tutorials, automation, content creation, and online earning topics.</p>
+      <h2>2. Educational content only</h2>
+      <p>Content on this site is for general informational and educational purposes. It is not professional, legal, financial, or investment advice. Always do your own research before making decisions, especially those involving money.</p>
+      <h2>3. No income guarantees</h2>
+      <p>Any content about “earning money with AI” or similar topics does not guarantee income. Results depend on individual effort, skills, and market conditions.</p>
+      <h2>4. Third-party tools and links</h2>
+      <p>We reference third-party AI tools (e.g., ChatGPT, Grok, Kling AI, CapCut, ElevenLabs, Canva). We do not own these tools and are not responsible for their pricing, availability, or policies, which can change at any time.</p>
+      <h2>5. Acceptable use</h2>
+      <p>You agree not to misuse this website, attempt unauthorized access, or use it for unlawful purposes.</p>
+      <h2>6. Intellectual property</h2>
+      <p>Content, design, and branding on this site belong to Ghulam Mustafa Janjua / FuturMind AI unless otherwise noted. Third-party trademarks belong to their respective owners.</p>
+      <h2>7. Limitation of liability</h2>
+      <p>FuturMind AI and Ghulam Mustafa Janjua are not liable for any losses or damages resulting from your use of this website or reliance on its content.</p>
+      <h2>8. Changes to these terms</h2>
+      <p>We may update these Terms of Service periodically. Continued use of the Site means you accept the updated terms.</p>
+      <h2>9. Contact</h2>
+      <p>Questions about these terms:</p>
+      <ul>
+        <li>Ghulam Mustafa Janjua</li>
+        <li>Email: <a href="mailto:mustafajanjua0786@gmail.com">mustafajanjua0786@gmail.com</a></li>
+        <li>Phone: <a href="tel:+923427892955">+92 342 7892955</a></li>
+        <li>Location: Dubai, United Arab Emirates</li>
+      </ul>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding-top:0;">
+        <p>&copy; <span data-year></span> FuturMind AI · Ghulam Mustafa Janjua · Dubai, UAE</p>
+        <div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="disclaimer.html">Disclaimer</a><a href="contact.html">Contact</a></div>
+      </div>
+    </div>
+  </footer>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" type="button"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script src="script.js"></script>
+</body>
+</html>
