@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Best Free AI Voice Generators">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B1024"/><stop offset="100%" stop-color="#05070F"/></linearGradient>
+<radialGradient id="o1" cx="80%" cy="45%" r="50%"><stop offset="0%" stop-color="#A855F7" stop-opacity="0.50"/><stop offset="100%" stop-color="#A855F7" stop-opacity="0"/></radialGradient>
+<radialGradient id="o2" cx="0%" cy="100%" r="65%"><stop offset="0%" stop-color="#7C3AED" stop-opacity="0.40"/><stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/></radialGradient>
+<linearGradient id="acc" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#D8B4FE"/><stop offset="100%" stop-color="#A855F7"/></linearGradient>
+<linearGradient id="fm" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7AA2FF"/><stop offset="50%" stop-color="#C084FC"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1.2" fill="#ffffff" fill-opacity="0.07"/></pattern>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<rect width="1200" height="630" fill="url(#grid)"/>
+<rect width="1200" height="630" fill="url(#o1)"/>
+<rect width="1200" height="630" fill="url(#o2)"/>
+<g font-family="'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif">
+<circle cx="955" cy="315" r="165" fill="url(#acc)" fill-opacity="0.08"/><rect x="812" y="295.0" width="14" height="40" rx="7" fill="url(#acc)" fill-opacity="0.6192307692307693"/><rect x="838" y="270.0" width="14" height="90" rx="7" fill="url(#acc)" fill-opacity="0.7057692307692308"/><rect x="864" y="240.0" width="14" height="150" rx="7" fill="url(#acc)" fill-opacity="0.8096153846153846"/><rect x="890" y="205.0" width="14" height="220" rx="7" fill="url(#acc)" fill-opacity="0.9307692307692308"/><rect x="916" y="235.0" width="14" height="160" rx="7" fill="url(#acc)" fill-opacity="0.826923076923077"/><rect x="942" y="185.0" width="14" height="260" rx="7" fill="url(#acc)" fill-opacity="1.0"/><rect x="968" y="225.0" width="14" height="180" rx="7" fill="url(#acc)" fill-opacity="0.8615384615384616"/><rect x="994" y="260.0" width="14" height="110" rx="7" fill="url(#acc)" fill-opacity="0.7403846153846154"/><rect x="1020" y="215.0" width="14" height="200" rx="7" fill="url(#acc)" fill-opacity="0.8961538461538463"/><rect x="1046" y="250.0" width="14" height="130" rx="7" fill="url(#acc)" fill-opacity="0.775"/><rect x="1072" y="280.0" width="14" height="70" rx="7" fill="url(#acc)" fill-opacity="0.6711538461538462"/><rect x="1098" y="295.0" width="14" height="40" rx="7" fill="url(#acc)" fill-opacity="0.6192307692307693"/>
+<rect x="92" y="96" rx="20" height="40" width="156" fill="#A855F7" fill-opacity="0.18" stroke="#A855F7" stroke-opacity="0.7"/>
+<circle cx="113" cy="116" r="5" fill="#D8B4FE"/>
+<text x="126" y="124" font-size="20" font-weight="700" fill="#D8B4FE">AI Voice</text>
+<text x="92" y="241" font-size="72" font-weight="800" fill="#FFFFFF" letter-spacing="-1.5">Best Free AI</text><text x="92" y="319" font-size="72" font-weight="800" fill="#FFFFFF" letter-spacing="-1.5">Voice</text><text x="92" y="396" font-size="72" font-weight="800" fill="#FFFFFF" letter-spacing="-1.5">Generators</text>
+<rect x="92" y="428" width="140" height="7" rx="3.5" fill="url(#acc)"/>
+<rect x="92" y="488" width="54" height="54" rx="14" fill="#0C1428" stroke="url(#fm)" stroke-width="2"/>
+<text x="119" y="523" font-size="21" font-weight="900" fill="url(#fm)" text-anchor="middle">FM</text>
+<text x="162" y="512" font-size="23" font-weight="800" fill="#EEF1FF">FuturMind AI</text>
+<text x="162" y="537" font-size="17" font-weight="500" fill="#98A0C3">Top Tools 2026</text>
+</g>
+</svg>

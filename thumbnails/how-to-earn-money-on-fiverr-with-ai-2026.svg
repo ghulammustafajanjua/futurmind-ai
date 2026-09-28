@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Earn Money on Fiverr with AI">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B1024"/><stop offset="100%" stop-color="#05070F"/></linearGradient>
+<radialGradient id="o1" cx="80%" cy="45%" r="50%"><stop offset="0%" stop-color="#F59E0B" stop-opacity="0.50"/><stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/></radialGradient>
+<radialGradient id="o2" cx="0%" cy="100%" r="65%"><stop offset="0%" stop-color="#7C3AED" stop-opacity="0.40"/><stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/></radialGradient>
+<linearGradient id="acc" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FDE68A"/><stop offset="100%" stop-color="#F59E0B"/></linearGradient>
+<linearGradient id="fm" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7AA2FF"/><stop offset="50%" stop-color="#C084FC"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1.2" fill="#ffffff" fill-opacity="0.07"/></pattern>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<rect width="1200" height="630" fill="url(#grid)"/>
+<rect width="1200" height="630" fill="url(#o1)"/>
+<rect width="1200" height="630" fill="url(#o2)"/>
+<g font-family="'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif">
+<rect x="830" y="380" width="40" height="90" rx="10" fill="url(#acc)" fill-opacity="0.35"/><rect x="892" y="320" width="40" height="150" rx="10" fill="url(#acc)" fill-opacity="0.53"/><rect x="954" y="255" width="40" height="215" rx="10" fill="url(#acc)" fill-opacity="0.71"/><rect x="1016" y="180" width="40" height="290" rx="10" fill="url(#acc)" fill-opacity="0.89"/><polyline points="850,390 912,330 974,300 1036,200" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.9"/><circle cx="1036" cy="200" r="11" fill="#fff"/><circle cx="880" cy="200" r="46" fill="url(#acc)"/><text x="880" y="218" font-size="50" font-weight="900" text-anchor="middle" fill="#1a1204">$</text>
+<rect x="92" y="96" rx="20" height="40" width="142" fill="#F59E0B" fill-opacity="0.18" stroke="#F59E0B" stroke-opacity="0.7"/>
+<circle cx="113" cy="116" r="5" fill="#FDE68A"/>
+<text x="126" y="124" font-size="20" font-weight="700" fill="#FDE68A">Earning</text>
+<text x="92" y="303" font-size="78" font-weight="800" fill="#FFFFFF" letter-spacing="-1.5">Earn Money on</text><text x="92" y="387" font-size="78" font-weight="800" fill="#FFFFFF" letter-spacing="-1.5">Fiverr with AI</text>
+<rect x="92" y="419" width="140" height="7" rx="3.5" fill="url(#acc)"/>
+<rect x="92" y="488" width="54" height="54" rx="14" fill="#0C1428" stroke="url(#fm)" stroke-width="2"/>
+<text x="119" y="523" font-size="21" font-weight="900" fill="url(#fm)" text-anchor="middle">FM</text>
+<text x="162" y="512" font-size="23" font-weight="800" fill="#EEF1FF">FuturMind AI</text>
+<text x="162" y="537" font-size="17" font-weight="500" fill="#98A0C3">Beginner Guide 2026</text>
+</g>
+</svg>
