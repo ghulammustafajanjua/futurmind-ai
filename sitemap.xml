@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://futurmindai.com/</loc>
-<lastmod>2026-09-28</lastmod>
+<lastmod>2026-10-02</lastmod>
 <priority>1.0</priority>
 </url>
 <url>
@@ -12,7 +12,7 @@
 </url>
 <url>
 <loc>https://futurmindai.com/blog</loc>
-<lastmod>2026-09-28</lastmod>
+<lastmod>2026-10-02</lastmod>
 <priority>0.9</priority>
 </url>
 <url>
@@ -148,6 +148,11 @@
 <url>
 <loc>https://futurmindai.com/how-to-use-canva-ai-for-free-2026</loc>
 <lastmod>2026-09-28</lastmod>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://futurmindai.com/how-to-earn-money-online-in-pakistan-with-ai-2026</loc>
+<lastmod>2026-10-02</lastmod>
 <priority>0.9</priority>
 </url>
 </urlset>
