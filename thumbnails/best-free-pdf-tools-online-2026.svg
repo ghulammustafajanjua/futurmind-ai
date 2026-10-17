@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Best Free PDF Tools Online in 2026">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B1024"/><stop offset="100%" stop-color="#05070F"/></linearGradient>
+<radialGradient id="o1" cx="80%" cy="45%" r="50%"><stop offset="0%" stop-color="#F59E0B" stop-opacity="0.50"/><stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/></radialGradient>
+<radialGradient id="o2" cx="0%" cy="100%" r="65%"><stop offset="0%" stop-color="#7C3AED" stop-opacity="0.40"/><stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/></radialGradient>
+<linearGradient id="acc" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FCD34D"/><stop offset="100%" stop-color="#F59E0B"/></linearGradient>
+<linearGradient id="fm" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7AA2FF"/><stop offset="50%" stop-color="#C084FC"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1.2" fill="#ffffff" fill-opacity="0.07"/></pattern>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<rect width="1200" height="630" fill="url(#grid)"/>
+<rect width="1200" height="630" fill="url(#o1)"/>
+<rect width="1200" height="630" fill="url(#o2)"/>
+<g font-family="'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif">
+<rect x="770" y="150" width="210" height="270" rx="18" fill="#ffffff" fill-opacity="0.08" stroke="url(#acc)" stroke-width="3"/><path d="M930 150 L980 200 L930 200 Z" fill="url(#acc)" fill-opacity="0.8"/><rect x="800" y="225" width="150" height="10" rx="5" fill="#fff" fill-opacity="0.35"/><rect x="800" y="252" width="120" height="10" rx="5" fill="#fff" fill-opacity="0.25"/><rect x="800" y="279" width="140" height="10" rx="5" fill="#fff" fill-opacity="0.25"/><rect x="795" y="345" width="84" height="46" rx="10" fill="url(#acc)"/><text x="837" y="377" font-size="24" font-weight="900" fill="#0B1024" text-anchor="middle">PDF</text>
+<rect x="890" y="250" width="210" height="270" rx="18" fill="#0C1428" fill-opacity="0.92" stroke="#7AA2FF" stroke-opacity="0.8" stroke-width="3"/><rect x="920" y="290" width="150" height="10" rx="5" fill="#fff" fill-opacity="0.3"/><rect x="920" y="317" width="110" height="10" rx="5" fill="#fff" fill-opacity="0.2"/>
+<circle cx="945" cy="400" r="26" fill="#7AA2FF" fill-opacity="0.25"/><path d="M933 400 L957 400 M945 388 L945 412" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+<circle cx="1015" cy="400" r="26" fill="#FCD34D" fill-opacity="0.25"/><path d="M1003 392 L1015 404 L1027 392" stroke="#FCD34D" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M1015 382 L1015 404" stroke="#FCD34D" stroke-width="5" stroke-linecap="round"/>
+<rect x="920" y="455" width="150" height="38" rx="10" fill="#22C55E" fill-opacity="0.2" stroke="#22C55E"/><text x="995" y="481" font-size="19" font-weight="800" fill="#86EFAC" text-anchor="middle">FREE</text>
+<rect x="92" y="96" rx="20" height="40" width="172" fill="#F59E0B" fill-opacity="0.18" stroke="#F59E0B" stroke-opacity="0.7"/>
+<circle cx="113" cy="116" r="5" fill="#FCD34D"/>
+<text x="126" y="124" font-size="20" font-weight="700" fill="#FCD34D">Free Tools</text>
+<text x="92" y="241" font-size="72" font-weight="800" fill="#FFFFFF" letter-spacing="-1.5">Best Free</text><text x="92" y="319" font-size="72" font-weight="800" fill="#FFFFFF" letter-spacing="-1.5">PDF Tools</text><text x="92" y="396" font-size="72" font-weight="800" fill="#FFFFFF" letter-spacing="-1.5">Online 2026</text>
+<rect x="92" y="428" width="140" height="7" rx="3.5" fill="url(#acc)"/>
+<rect x="92" y="488" width="54" height="54" rx="14" fill="#0C1428" stroke="url(#fm)" stroke-width="2"/>
+<text x="119" y="523" font-size="21" font-weight="900" fill="url(#fm)" text-anchor="middle">FM</text>
+<text x="162" y="512" font-size="23" font-weight="800" fill="#EEF1FF">FuturMind AI</text>
+<text x="162" y="537" font-size="17" font-weight="500" fill="#98A0C3">Compared &amp; Tested</text>
+</g>
+</svg>
