@@ -1632,3 +1632,6 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
   .orb, .logo-mark::before, .badge-dot { animation: none; }
   .animate-on-scroll { opacity: 1; transform: none; transition: none; }
 }
+
+/* Empty ad placeholders are hidden until AdSense is approved (Auto ads will place real ads). */
+.ad-slot{display:none !important;}
