@@ -1635,3 +1635,12 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
 
 /* Empty ad placeholders are hidden until AdSense is approved (Auto ads will place real ads). */
 .ad-slot{display:none !important;}
+
+/* About the author box (articles) */
+.author-box{display:flex;gap:1.1rem;align-items:flex-start;max-width:900px;margin:0 auto;padding:1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius)}
+.author-box .author-av{flex:0 0 56px;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;background:var(--gradient-neon)}
+.author-box h3{font-size:1.05rem;margin:0 0 .15rem}
+.author-box .author-role{font-size:.82rem;color:var(--primary-light);margin:0 0 .6rem}
+.author-box p{color:var(--text-muted);font-size:.93rem;margin:0 0 .6rem;line-height:1.65}
+.author-box a{color:var(--primary-light)}
+@media (max-width:560px){.author-box{flex-direction:column}}
