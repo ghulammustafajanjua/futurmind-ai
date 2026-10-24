@@ -1644,3 +1644,12 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
 .author-box p{color:var(--text-muted);font-size:.93rem;margin:0 0 .6rem;line-height:1.65}
 .author-box a{color:var(--primary-light)}
 @media (max-width:560px){.author-box{flex-direction:column}}
+/* About story */
+.story{max-width:760px;margin:0 auto}
+.story p{color:var(--text-muted);font-size:1.075rem;line-height:1.9;margin-bottom:1.15rem}
+.story p strong{color:var(--text)}
+.story h2{font-size:clamp(1.35rem,2.6vw,1.75rem);font-weight:800;margin:2.75rem 0 1rem;letter-spacing:-.01em}
+.story .story-quote{font-size:1.2rem;color:var(--text);border-left:3px solid var(--primary);padding-left:1rem;margin:1.4rem 0}
+.story .story-sign{margin-top:2.5rem;font-weight:700;color:var(--text);font-style:italic}
+.story .story-sign span{font-weight:400;color:var(--text-muted);font-size:.95rem}
+.story a{color:var(--primary-light)}
