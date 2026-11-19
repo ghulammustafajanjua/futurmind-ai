@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fiverr Fee Calculator 2026 (20% Seller Fee) | FuturMind AI</title>
-  <meta name="description" content="Free Fiverr fee calculator for sellers: see how much you keep after the 20% Fiverr fee, withdrawal fees and currency conversion, or what price to charge." />
+  <title>Fiverr Fee Calculator 2026: Seller &amp; Buyer Fees | FuturMind AI</title>
+  <meta name="description" content="Free Fiverr fee calculator: see what you keep after the 20% seller fee, what the buyer pays with the 5.5% service fee, and what price to charge." />
   <meta name="author" content="Ghulam Mustafa Janjua" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://futurmindai.com/fiverr-fee-calculator" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="FuturMind AI" />
-  <meta property="og:title" content="Fiverr Fee Calculator 2026" />
-  <meta property="og:description" content="Free Fiverr fee calculator for sellers: see how much you keep after the 20% Fiverr fee, withdrawal fees and currency conversion, or what price to charge." />
+  <meta property="og:title" content="Fiverr Fee Calculator 2026: Seller &amp; Buyer Fees" />
+  <meta property="og:description" content="Free Fiverr fee calculator: see what you keep after the 20% seller fee, what the buyer pays with the 5.5% service fee, and what price to charge." />
   <meta property="og:url" content="https://futurmindai.com/fiverr-fee-calculator" />
   <meta property="og:image" content="https://futurmindai.com/images/og/default.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Fiverr Fee Calculator 2026" />
-  <meta name="twitter:description" content="Free Fiverr fee calculator for sellers: see how much you keep after the 20% Fiverr fee, withdrawal fees and currency conversion, or what price to charge." />
+  <meta name="twitter:title" content="Fiverr Fee Calculator 2026: Seller &amp; Buyer Fees" />
+  <meta name="twitter:description" content="Free Fiverr fee calculator: see what you keep after the 20% seller fee, what the buyer pays with the 5.5% service fee, and what price to charge." />
   <meta name="twitter:image" content="https://futurmindai.com/images/og/default.png" />
   <meta name="theme-color" content="#050810" />
   <link rel="icon" href="/brand/favicon.svg" type="image/svg+xml" />
@@ -36,7 +36,7 @@
   "@type": "WebApplication",
   "name": "Fiverr Fee Calculator",
   "url": "https://futurmindai.com/fiverr-fee-calculator",
-  "description": "Free Fiverr fee calculator for sellers: see how much you keep after the 20% Fiverr fee, withdrawal fees and currency conversion, or what price to charge.",
+  "description": "Free Fiverr fee calculator: see what you keep after the 20% seller fee, what the buyer pays with the 5.5% service fee, and what price to charge.",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "Any (web browser)",
   "isAccessibleForFree": true,
@@ -241,6 +241,7 @@
       <tr><td>Currency conversion</td><td class="num" id="r4">-</td></tr>
       <tr><td><strong>You receive</strong></td><td class="num" id="r5">-</td></tr>
       <tr id="locRow" style="display:none"><td>In your currency</td><td class="num" id="r6">-</td></tr>
+      <tr><td id="r7t">Buyer pays per order (with 5.5% service fee)</td><td class="num" id="r7">-</td></tr>
     </tbody>
   </table>
   <p style="text-align:center;margin:1rem 0 0"><span style="color:var(--text-muted);font-size:.9rem" id="bigLabel">You keep</span><br /><span class="ft-big" id="big">-</span></p>
@@ -261,12 +262,23 @@
 
 <h2>How much does Fiverr charge buyers?</h2>
 <p>Buyers pay a separate <strong>service fee</strong> at checkout. According to Fiverr's Help Center, it is <strong>5.5% of the purchase amount, plus $3.50 on orders under $200</strong>. Some countries also add tax such as VAT. The buyer pays this fee, so it does not come out of the seller's earnings.</p>
-<ul>
-<li><strong>$5 gig:</strong> buyer pays about $8.78 (about $3.78 fee), seller receives $4.00</li>
-<li><strong>$50 gig:</strong> buyer pays $56.25 ($6.25 fee), seller receives $40.00</li>
-<li><strong>$100 gig:</strong> buyer pays $109.00 ($9.00 fee), seller receives $80.00</li>
-<li><strong>$200 gig:</strong> buyer pays $211.00 ($11.00 fee), seller receives $160.00</li>
-</ul>
+<h3>Fiverr fees for common gig prices</h3>
+<div style="overflow-x:auto">
+<table class="ft-table" style="font-size:.85rem">
+<thead><tr><th>Gig</th><th>You get</th><th>Seller fee</th><th>Buyer fee</th><th>Buyer pays</th></tr></thead>
+<tbody>
+<tr><td>$5.00</td><td class="num">$4.00</td><td class="num">$1.00</td><td class="num">$3.78</td><td class="num">$8.78</td></tr>
+<tr><td>$10.00</td><td class="num">$8.00</td><td class="num">$2.00</td><td class="num">$4.05</td><td class="num">$14.05</td></tr>
+<tr><td>$20.00</td><td class="num">$16.00</td><td class="num">$4.00</td><td class="num">$4.60</td><td class="num">$24.60</td></tr>
+<tr><td>$25.00</td><td class="num">$20.00</td><td class="num">$5.00</td><td class="num">$4.88</td><td class="num">$29.88</td></tr>
+<tr><td>$50.00</td><td class="num">$40.00</td><td class="num">$10.00</td><td class="num">$6.25</td><td class="num">$56.25</td></tr>
+<tr><td>$100.00</td><td class="num">$80.00</td><td class="num">$20.00</td><td class="num">$9.00</td><td class="num">$109.00</td></tr>
+<tr><td>$200.00</td><td class="num">$160.00</td><td class="num">$40.00</td><td class="num">$11.00</td><td class="num">$211.00</td></tr>
+<tr><td>$500.00</td><td class="num">$400.00</td><td class="num">$100.00</td><td class="num">$27.50</td><td class="num">$527.50</td></tr>
+</tbody>
+</table>
+</div>
+<p>"You get" is what the seller receives after Fiverr's 20% seller fee, before withdrawal and currency conversion costs. "Buyer fee" is Fiverr's 5.5% service fee plus $3.50 on orders under $200, before any VAT or local tax.</p>
 <p>Every payment has its own fee, so a tip or an extra added later carries a separate buyer fee. In some regions Fiverr now shows buyers the "all-in" price (gig price plus fees) while they browse. This does not change what the seller earns.</p>
 
 <h2>How to use the calculator</h2>
@@ -381,6 +393,7 @@
     else{recv=a;var beforeConv=c<1?recv/(1-c):recv;var beforeW=beforeConv+w;gross=beforeW/0.8;fee=gross*0.2;conv=beforeConv-recv}
     $('r1t').textContent=mode==='A'?'Total order value ('+n+' order'+(n>1?'s':'')+')':'Total you must charge';
     $('r1').textContent=usd(gross);$('r2').textContent='- '+usd(fee);$('r3').textContent='- '+usd(w);$('r4').textContent='- '+usd(conv);$('r5').textContent=usd(recv);
+    var per0=gross/n,bfee=per0>0?per0*0.055+(per0<200?3.5:0):0;$('r7').textContent=per0>0?usd(per0+bfee):'-';
     $('locRow').style.display=rate>0?'':'none';$('r6').textContent=rate>0?Math.round(recv*rate).toLocaleString('en-US')+' '+cur:'';
     if(mode==='A'){$('bigLabel').textContent='You keep';$('big').textContent=usd(recv)+(gross>0?' ('+Math.round(recv/gross*100)+'%)':'');}
     else{var per=gross/n;$('bigLabel').textContent=n>1?'Charge per order':'Charge this price';$('big').textContent=usd(per);}
