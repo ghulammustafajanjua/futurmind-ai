@@ -1394,6 +1394,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
   box-shadow: 0 0 16px rgba(79, 124, 255, 0.25);
 }
 
+.footer-links h3,
 .footer-links h4 {
   font-size: 0.9rem;
   font-weight: 700;

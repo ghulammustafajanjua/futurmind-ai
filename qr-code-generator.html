@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Free QR Code Generator (No Sign-Up, Never Expires) | FuturMind AI</title>
-  <meta name="description" content="Free QR code generator for websites, WhatsApp, Wi-Fi, email, phone and text. Choose colours, download PNG or SVG. No sign-up, no tracking, never expires." />
+  <meta name="description" content="Free QR code generator for websites, WhatsApp, Wi-Fi, email, phone and text. Choose colors, download PNG or SVG. No sign-up, no tracking, never expires." />
   <meta name="author" content="Ghulam Mustafa Janjua" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://futurmindai.com/qr-code-generator" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="FuturMind AI" />
   <meta property="og:title" content="Free QR Code Generator: No Sign-Up, Never Expires" />
-  <meta property="og:description" content="Free QR code generator for websites, WhatsApp, Wi-Fi, email, phone and text. Choose colours, download PNG or SVG. No sign-up, no tracking, never expires." />
+  <meta property="og:description" content="Free QR code generator for websites, WhatsApp, Wi-Fi, email, phone and text. Choose colors, download PNG or SVG. No sign-up, no tracking, never expires." />
   <meta property="og:url" content="https://futurmindai.com/qr-code-generator" />
   <meta property="og:image" content="https://futurmindai.com/images/og/default.png" />
   <meta property="og:image:width" content="1200" />
@@ -19,7 +19,7 @@
   <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Free QR Code Generator: No Sign-Up, Never Expires" />
-  <meta name="twitter:description" content="Free QR code generator for websites, WhatsApp, Wi-Fi, email, phone and text. Choose colours, download PNG or SVG. No sign-up, no tracking, never expires." />
+  <meta name="twitter:description" content="Free QR code generator for websites, WhatsApp, Wi-Fi, email, phone and text. Choose colors, download PNG or SVG. No sign-up, no tracking, never expires." />
   <meta name="twitter:image" content="https://futurmindai.com/images/og/default.png" />
   <meta name="theme-color" content="#050810" />
   <link rel="icon" href="/brand/favicon.svg" type="image/svg+xml" />
@@ -36,7 +36,7 @@
   "@type": "WebApplication",
   "name": "QR Code Generator",
   "url": "https://futurmindai.com/qr-code-generator",
-  "description": "Free QR code generator for websites, WhatsApp, Wi-Fi, email, phone and text. Choose colours, download PNG or SVG. No sign-up, no tracking, never expires.",
+  "description": "Free QR code generator for websites, WhatsApp, Wi-Fi, email, phone and text. Choose colors, download PNG or SVG. No sign-up, no tracking, never expires.",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Any (web browser)",
   "isAccessibleForFree": true,
@@ -225,7 +225,7 @@
     </div>
     <div>
       <div class="ft-grid2">
-        <div class="ft-field"><label for="fg">QR colour</label><input id="fg" class="ft-input" type="color" value="#000000" style="height:46px;padding:.3rem" /></div>
+        <div class="ft-field"><label for="fg">QR color</label><input id="fg" class="ft-input" type="color" value="#000000" style="height:46px;padding:.3rem" /></div>
         <div class="ft-field"><label for="bg">Background</label><input id="bg" class="ft-input" type="color" value="#ffffff" style="height:46px;padding:.3rem" /></div>
       </div>
       <div class="ft-field"><label for="sz">Download size: <span id="szv">1000</span> px</label><input id="sz" type="range" min="200" max="2000" step="100" value="1000" style="width:100%;accent-color:var(--primary)" /></div>
@@ -248,7 +248,7 @@
 <ol>
 <li><strong>Choose the type:</strong> website link, WhatsApp, Wi-Fi, email, phone or plain text.</li>
 <li><strong>Fill in the details.</strong> The QR code updates instantly as you type.</li>
-<li><strong>Pick colours and size</strong> if you like. Keep a dark code on a light background so every phone can scan it.</li>
+<li><strong>Pick colors and size</strong> if you like. Keep a dark code on a light background so every phone can scan it.</li>
 <li><strong>Test it</strong> by pointing your phone camera at the screen, then press <em>Download PNG</em> or <em>Download SVG</em>.</li>
 </ol>
 
@@ -302,7 +302,7 @@
           <p class="footer-owner">&copy; <span data-year></span> Ghulam Mustafa Janjua &middot; Dubai, UAE</p>
         </div>
         <div class="footer-links">
-          <h4>Explore</h4>
+          <h3>Explore</h3>
           <ul>
             <li><a href="/tools">AI Tools</a></li>
             <li><a href="/free-tools">Free Tools</a></li>
@@ -312,7 +312,7 @@
           </ul>
         </div>
         <div class="footer-links">
-          <h4>Popular Guides</h4>
+          <h3>Popular Guides</h3>
           <ul>
             <li><a href="/best-free-ai-video-generators-2026">Free AI Video Generators</a></li>
             <li><a href="/how-to-earn-money-on-fiverr-with-ai-2026">Earn on Fiverr with AI</a></li>
@@ -321,7 +321,7 @@
           </ul>
         </div>
         <div class="footer-links">
-          <h4>Contact &amp; Legal</h4>
+          <h3>Contact &amp; Legal</h3>
           <ul>
             <li><a href="mailto:mustafajanjua0786@gmail.com">mustafajanjua0786@gmail.com</a></li>
             <li><a href="/contact">Contact form</a></li>
@@ -373,8 +373,8 @@
     try{var q=qrcode(0,$('ecl').value);q.addData(d,'Byte');q.make();qr=q}catch(e){$('msg').textContent='This is too much text for one QR code. Please make it shorter.';$('png').disabled=$('svg').disabled=true;return}
     paint(cv,Math.max(4,Math.floor(300/(qr.getModuleCount()+8))));
     $('msg').textContent='Scan it with your phone camera to test it.';$('png').disabled=$('svg').disabled=false;
-    var w='';if(lum($('fg').value)>lum($('bg').value))w='The QR colour is lighter than the background. Many phones cannot scan this. Use a dark QR colour on a light background.';
-    else if(lum($('bg').value)-lum($('fg').value)<100)w='The colours are too similar. Some phones may not scan it. Use more contrast.';
+    var w='';if(lum($('fg').value)>lum($('bg').value))w='The QR color is lighter than the background. Many phones cannot scan this. Use a dark QR color on a light background.';
+    else if(lum($('bg').value)-lum($('fg').value)<100)w='The colors are too similar. Some phones may not scan it. Use more contrast.';
     $('warn').innerHTML=w?'<div class="ft-warn">'+w+'</div>':'';
   }
   function paint(c,cell){var n=qr.getModuleCount(),m=4,size=(n+2*m)*cell,x=c.getContext('2d');c.width=c.height=size;x.fillStyle=$('bg').value;x.fillRect(0,0,size,size);x.fillStyle=$('fg').value;
